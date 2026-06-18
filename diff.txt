@@ -1,0 +1,16 @@
+diff --git a/src/index.js b/src/index.js
+index 83a90c3..4f11b2b 100644
+--- a/src/index.js
++++ b/src/index.js
+@@ -1,7 +1,8 @@
+ function greetUser(name) {
+-  if (!name) {
+-    return "Hello, Guest!";
+-  }
+-  return "Hello, " + name + "!";
++  if (name === "Admin") {
++    return "Welcome back, Administrator!";
++  }
++  const userName = name || "Guest";
++  return `Hello, ${userName}!`;
+ }
